@@ -58,7 +58,7 @@ We tested several models:
 | XGBoost               | **99.8%** | **95.4%** | **88.2%** | **91.7%** |
 
 ✅ **Final Model:** **XGBoost** (Best Precision & Recall)  
-✅ **Saved Model:** `fraud_model.pkl` using `joblib`  
+✅ **Saved Model:** `fraud_detection_rf_model.pkl` using `joblib`  
 
 ---
 
@@ -120,30 +120,17 @@ streamlit run fraud_ui.py
 
 ---
 
-## ☁ **7. Deployment & Hosting**
-The entire system was deployed **for real-world usage**.
-
-### **🔹 FastAPI Deployment**
-✅ **Dockerized the API** for easy scaling  
-✅ Hosted API using **Render / AWS EC2**  
-✅ API is available via **public URL**  
-
-### **🔹 Streamlit Deployment**
-✅ Uploaded `fraud_ui.py` to **Streamlit Cloud**  
-✅ Users can access via browser, no installation needed  
-
----
-
 ## 🏗 **Project Structure**
 ```
 📂 fraud-detection
-│── 📂 models          # ML Model files
-│── 📂 api             # FastAPI backend
-│── 📂 frontend        # Streamlit frontend
-│── fraud_ui.py        # Streamlit app
-│── app.py             # FastAPI backend
-│── Dockerfile         # Deployment
-│── README.md          # Documentation
+│── __pycache__/        # Cached Python files
+│── .gitattributes      # Git LFS tracking file
+│── .gitignore          # Ignore unnecessary files
+│── Main.ipynb          # Jupyter Notebook for EDA & Training
+│── README.md           # Project documentation
+│── app.py              # FastAPI backend
+│── fraud_detection_rf_model.pkl  # Trained ML model
+│── fraud_ui.py         # Streamlit frontend
 ```
 
 ---
